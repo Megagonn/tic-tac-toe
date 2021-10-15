@@ -14,10 +14,10 @@
             <p>player two</p>
             <input type="text" id="p2" required>
         
-            <div style="display: none;">
+            <!-- <div style="display: none;">
                 
                 <button onclick="start()" id="start" style="background-color: aqua; color: black;">START</button>
-            </div>
+            </div> -->
             
         
         
@@ -25,9 +25,31 @@
         <div id="button">
             <button onclick="next()" id="next" style="background-color: whitesmoke; color: green;">NEXT</button>
         </div>
-        <div style="display: flex; background-color: greenyellow; width: 60%;">
-            <div id="player1"></div>
+        <div style="background-color: greenyellow; width: 60%;">
+            <div style="display: flex;">
+                <div id="player1"></div>
             <div id="player2"></div>
+            </div>
+
+            <div>
+                <table cellpadding="0px" border="0px">
+                    <tr>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px;" onclick="click()"></button></td>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                    </tr>
+                    <tr>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                    </tr>
+                    <tr>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -36,11 +58,11 @@
         function next() {
             player1.innerText = p1.value;
             player2.innerText = p2.value;
-            button.innerText = start;
+            // button.innerText = start;
         }
-        // function button(){
+        function click(a){
 
-        // }
+        }
     </script>
 </body>
 </html>
