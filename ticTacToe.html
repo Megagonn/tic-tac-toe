@@ -34,9 +34,9 @@
             <div>
                 <table cellpadding="0px" border="0px">
                     <tr>
-                        <td style="width: max-content;"><button id="b1" style="padding: 20px;" onclick="click()"></button></td>
-                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
-                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
+                        <td style="width: max-content;"><button id="b2" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
+                        <td style="width: max-content;"><button id="b3" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
                     </tr>
                     <tr>
                         <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
@@ -60,9 +60,18 @@
             player2.innerText = p2.value;
             // button.innerText = start;
         }
-        function click(a){
-
-        }
+        var p1 = "O";
+            // var p2 = "X";
+        function clickme(event){
+            event.target.innerText = p1;
+            var p2 = "X";
+            if (p1 == p1) {
+                event.target.innerText  = p2;
+            }
+            if(event.target.innerText == p2) {
+                // event.target.innerText = p1;
+            }
+        } 
     </script>
 </body>
 </html>
