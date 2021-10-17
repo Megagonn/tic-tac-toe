@@ -34,43 +34,146 @@
             <div>
                 <table cellpadding="0px" border="0px">
                     <tr>
-                        <td style="width: max-content;"><button id="b1" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
-                        <td style="width: max-content;"><button id="b2" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
-                        <td style="width: max-content;"><button id="b3" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
+                        <td style="width: max-content;"><button id="b1" style="padding: 20px; color: black;" onclick="clickme(event); checkM()"></button></td>
+                        <td style="width: max-content;"><button id="b2" style="padding: 20px; color: black;" onclick="clickme(event); checkM()"></button></td>
+                        <td style="width: max-content;"><button id="b3" style="padding: 20px; color: black;" onclick="clickme(event); checkM()"></button></td>
                     </tr>
                     <tr>
-                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
-                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
-                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                        <td style="width: max-content;"><button id="b4" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
+                        <td style="width: max-content;"><button id="b5" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
+                        <td style="width: max-content;"><button id="b6" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
                     </tr>
                     <tr>
-                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
-                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
-                        <td style="width: max-content;"><button id="b1" style="padding: 20px;"></button></td>
+                        <td style="width: max-content;"><button id="b7" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
+                        <td style="width: max-content;"><button id="b8" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
+                        <td style="width: max-content;"><button id="b9" style="padding: 20px; color: black;" onclick="clickme(event)"></button></td>
                     </tr>
                 </table>
             </div>
+            <button onclick="reset()">RESET</button>
+            <button onclick="checkMe()">check me</button>
         </div>
     </div>
 
     
     <script type="text/javascript">
+    
+    
+        function checkMe() {
+            b1 = document.getElementById("b1");
+            b2 = document.getElementById("b2");
+            b3 = document.getElementById("b3");
+            b4 = document.getElementById("b4");
+            b5 = document.getElementById("b5");
+            b6 = document.getElementById("b6");
+            b7 = document.getElementById("b7");
+            b8 = document.getElementById("b8");
+            b9 = document.getElementById("b9");
+            if (("b1" == "O" && "b2" == "O" && "b3" == "O")){
+                console.log("player 1 won...");
+                // b1.disabled = true;
+                // document.getElementById("b2").disabled = true;
+                // document.getElementById("b3").disabled = true;
+                // document.getElementById("b4").disabled = true;
+                // document.getElementById("b5").disabled = true;
+                // document.getElementById("b6").disabled = true;
+                // document.getElementById("b7").disabled = true;
+                // document.getElementById("b8").disabled = true;
+                // document.getElementById("b9").disabled = true;
+                // alert("player 1 won...")
+            }
+
+
+        //     b1 = document.getElementById("b1");
+        //     b2 = document.getElementById("b2");
+        //     b3 = document.getElementById("b3");
+        //     b4 = document.getElementById("b4");
+        //     b5 = document.getElementById("b5");
+        //     b6 = document.getElementById("b6");
+        //     b7 = document.getElementById("b7");
+        //     b8 = document.getElementById("b8");
+        //     b9 = document.getElementById("b9");
+        //     if (b1 == "O" && b2 == "O" && b3 == "O" || b4 == "O" && b5 == "O" && b6 == "O" || b7 == "O" && b8 == "O" && b9 == "O") {alert("player 1 won...");
+        //         b1.disabled = true;
+        //         document.getElementById("b2").disabled = true;
+        //         document.getElementById("b3").disabled = true;
+        //         // document.getElementById("b4").disabled = true;
+        //         // document.getElementById("b5").disabled = true;
+        //         // document.getElementById("b6").disabled = true;
+        //         document.getElementById("b7").disabled = true;
+        //         document.getElementById("b8").disabled = true;
+        //         document.getElementById("b9").disabled = true;
+        // }
+                
+        }
+
         function next() {
             player1.innerText = p1.value;
             player2.innerText = p2.value;
-            // button.innerText = start;
         }
-        var p1 = "O";
-            // var p2 = "X";
+        
+        // O/X function
+        let p1 = 1;
         function clickme(event){
-            event.target.innerText = p1;
-            var p2 = "X";
-            if (p1 == p1) {
-                event.target.innerText  = p2;
+            if (p1== 1) {
+                event.target.innerText= "X";
+                // document.getElementById("b1").disabled = true;
+                // document.getElementById("b2").disabled = true;
+                // document.getElementById("b3").disabled = true;
+                // document.getElementById("b4").disabled = true;
+                // document.getElementById("b5").disabled = true;
+                // document.getElementById("b6").disabled = true;
+                // document.getElementById("b7").disabled = true;
+                // document.getElementById("b8").disabled = true;
+                // document.getElementById("b9").disabled = true;
+                p1 = 0;
+                
+            }else {
+                event.target.innerText = "O";
+                // document.getElementById("b1").disabled = true;
+                p1 = 1;
             }
-            if(event.target.innerText == p2) {
-                // event.target.innerText = p1;
-            }
+
+            // b1 = document.getElementById("b1");
+            // b2 = document.getElementById("b2");
+            // b3 = document.getElementById("b3");
+            // b4 = document.getElementById("b4");
+            // b5 = document.getElementById("b5");
+            // b6 = document.getElementById("b6");
+            // b7 = document.getElementById("b7");
+            // b8 = document.getElementById("b8");
+            // b9 = document.getElementById("b9");
+            // if (b1 == "O" && b2 == "O" && b3 == "O" || b4 == "O" && b5 == "O" && b6 == "O" || b7 == "O" && b8 == "O" && b9 == "O") {
+            //     b1.disabled = true;
+            //     document.getElementById("b2").disabled = true;
+            //     document.getElementById("b3").disabled = true;
+            //     // document.getElementById("b4").disabled = true;
+            //     // document.getElementById("b5").disabled = true;
+            //     // document.getElementById("b6").disabled = true;
+            //     document.getElementById("b7").disabled = true;
+            //     document.getElementById("b8").disabled = true;
+            //     document.getElementById("b9").disabled = true;
+            //     alert("player 1 won...")
+            // }
+        }
+
+        // winner's function
+        // function winner() {
+            
+        // }
+
+        // reset function
+        function reset(){
+            let empty= "";
+            b1.innerText= empty;
+            b2.innerText= empty;
+            b3.innerText= empty;
+            b4.innerText= empty;
+            b5.innerText= empty;
+            b6.innerText= empty;
+            b7.innerText= empty;
+            b8.innerText= empty;
+            b9.innerText= empty;
         } 
     </script>
 </body>
