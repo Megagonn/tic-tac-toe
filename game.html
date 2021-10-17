@@ -7,9 +7,44 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div style="display: flex; background-color: crimson;">
+        <input type="text" value="" id="i1" onclick="clickMe(event); disabledMe1(event); checkMate()" readonly style="color: blue;">
+        <input type="text" value="" id="i2" onclick="clickMe(event); disabledMe2(event)" readonly style="color: blue;">
+        <input type="text" value="" id="i3" onclick="clickMe(event); disabledMe3(event)" readonly style="color: blue;">
+    </div>
+
+    <button onclick="checkMate()">click</button>
     <script>
-        
+        let x = 1;
+        function clickMe(event) {
+            if (x == 1) {
+                // document.getElementById("i1") = "O";
+                i1.value = "O";
+                // i2.value = "O";
+                // event.target.innerText = "O";
+                x = 0;
+            } else{
+                event.target.innerText = "X";
+                x=1;
+            }
+
+            
+        }
+        function checkMate() {
+            cc = i1.value;
+            if (cc == "O") {
+                alert("me won");
+            }
+        }
+        function disabledMe1() {
+            document.getElementById("i1").disabled = true;
+        }
+        // function disabledMe2() {
+        //     document.getElementById("i2").disabled = true;
+        // }
+        // function disabledMe3() {
+        //     document.getElementById("i3").disabled = true;
+        // }
     </script>
 </body>
 </html>
