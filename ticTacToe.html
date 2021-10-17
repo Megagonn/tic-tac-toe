@@ -54,8 +54,8 @@
             <button onclick="checkMe()">check me</button>
 
             <div style="display: flex;">
-                <input type="number" value="" readonly id="player1" >
-                <input type="number" value="" readonly id="player2" >
+                <input type="number" value="" readonly id="pl1" >
+                <input type="number" value="" readonly id="pl2" >
             </div>
         </div>
     </div>
@@ -91,7 +91,8 @@
         document.getElementById("b9").disabled = true;
     }
 
-
+    pl1.value = 0;
+    pl2.value = 0;
     // checkmate
     function checkMate() {
             bb1 = b1.value;
@@ -104,9 +105,8 @@
             bb8 = b8.value;
             bb9 = b9.value;
 
-
-            player1.value = 0;
-            player2.value = 0;
+            
+            
             // player 1
             if (((bb1 == "X") && (bb2 == "X")  && (bb3 == "X"))) {
                 alert("Player one('X')won");
@@ -116,7 +116,8 @@
                 document.getElementById("b7").disabled = true;
                 document.getElementById("b8").disabled = true;
                 document.getElementById("b9").disabled = true;
-                player1.value+=1;
+                
+                pl1.value ++;
 
             } else if (((bb4 == "X") && (bb5 == "X")  && (bb6 == "X"))) {
                 alert("Player one('X')won");
@@ -126,6 +127,9 @@
                 document.getElementById("b7").disabled = true;
                 document.getElementById("b8").disabled = true;
                 document.getElementById("b9").disabled = true;
+
+                pl1.value ++;
+
             } else if (((bb7 == "X") && (bb8 == "X")  && (bb9 == "X"))) {
                 alert("Player one('X')won");
                 document.getElementById("b1").disabled = true;
@@ -134,6 +138,9 @@
                 document.getElementById("b4").disabled = true;
                 document.getElementById("b5").disabled = true;
                 document.getElementById("b6").disabled = true;
+
+                pl1.value ++;
+                
             } else if (((bb1 == "X") && (bb4 == "X")  && (bb7 == "X"))) {
                 alert("Player one('X')won");
                 document.getElementById("b2").disabled = true;
@@ -141,6 +148,10 @@
                 document.getElementById("b5").disabled = true;
                 document.getElementById("b6").disabled = true;
                 document.getElementById("b8").disabled = true;
+                document.getElementById("b9").disabled = true;
+                
+                pl1.value ++;
+                
             } else if (((bb2 == "X") && (bb5 == "X")  && (bb8 == "X"))) {
                 alert("Player one('X')won");
                 document.getElementById("b1").disabled = true;
@@ -149,6 +160,9 @@
                 document.getElementById("b6").disabled = true;
                 document.getElementById("b7").disabled = true;
                 document.getElementById("b9").disabled = true;
+                
+                pl1.value ++;
+                
             } else if (((bb3 == "X") && (bb6 == "X")  && (bb9 == "X"))) {
                 alert("Player one('X')won");
                 document.getElementById("b1").disabled = true;
@@ -157,6 +171,9 @@
                 document.getElementById("b5").disabled = true;
                 document.getElementById("b7").disabled = true;
                 document.getElementById("b8").disabled = true;
+                
+                pl1.value ++;
+                
             } else if ((bb1 == "X") && (bb5 == "X")  && (bb9 == "X")){
                 alert("Player one('X')won");
                 document.getElementById("b2").disabled = true;
@@ -165,6 +182,9 @@
                 document.getElementById("b6").disabled = true;
                 document.getElementById("b7").disabled = true;
                 document.getElementById("b8").disabled = true;
+                
+                pl1.value ++;
+                
             } else if ((bb3 == "X") && (bb5 == "X")  && (bb7 == "X")){
                 alert("Player one('X')won");
                 document.getElementById("b1").disabled = true;
@@ -173,6 +193,9 @@
                 document.getElementById("b6").disabled = true;
                 document.getElementById("b8").disabled = true;
                 document.getElementById("b9").disabled = true;
+                
+                pl1.value ++;
+                
             }
             
 
@@ -186,6 +209,9 @@
                 document.getElementById("b7").disabled = true;
                 document.getElementById("b8").disabled = true;
                 document.getElementById("b9").disabled = true;
+                
+                pl2.value ++;
+                
             } else if (((bb4 == "O") && (bb5 == "O")  && (bb6 == "O"))) {
                 alert("Player two('O')won");
                 document.getElementById("b1").disabled = true;
@@ -194,6 +220,9 @@
                 document.getElementById("b7").disabled = true;
                 document.getElementById("b8").disabled = true;
                 document.getElementById("b9").disabled = true;
+                
+                pl2.value ++;
+                
             } else if (((bb7 == "O") && (bb8 == "O")  && (bb9 == "O"))) {
                 alert("Player two('O')won");
                 document.getElementById("b1").disabled = true;
@@ -202,6 +231,9 @@
                 document.getElementById("b4").disabled = true;
                 document.getElementById("b5").disabled = true;
                 document.getElementById("b6").disabled = true;
+                
+                pl2.value ++;
+                
             } else if (((bb1 == "O") && (bb4 == "O")  && (bb7 == "O"))) {
                 alert("Player two('O')won");
                 document.getElementById("b2").disabled = true;
@@ -209,6 +241,10 @@
                 document.getElementById("b5").disabled = true;
                 document.getElementById("b6").disabled = true;
                 document.getElementById("b8").disabled = true;
+                document.getElementById("b9").disabled = true;
+                
+                pl2.value ++;
+                
             } else if (((bb2 == "O") && (bb5 == "O")  && (bb8 == "O"))) {
                 alert("Player two('O')won");
                 document.getElementById("b1").disabled = true;
@@ -217,6 +253,9 @@
                 document.getElementById("b6").disabled = true;
                 document.getElementById("b7").disabled = true;
                 document.getElementById("b9").disabled = true;
+                
+                pl2.value ++;
+                
             } else if (((bb3 == "O") && (bb6 == "O")  && (bb9 == "O"))) {
                 alert("Player two('O')won");
                 document.getElementById("b1").disabled = true;
@@ -225,6 +264,9 @@
                 document.getElementById("b5").disabled = true;
                 document.getElementById("b7").disabled = true;
                 document.getElementById("b8").disabled = true;
+                
+                pl2.value ++;
+                
             } else if ((bb1 == "O") && (bb5 == "O")  && (bb9 == "O")){
                 alert("Player two('O')won");
                 document.getElementById("b2").disabled = true;
@@ -233,6 +275,9 @@
                 document.getElementById("b6").disabled = true;
                 document.getElementById("b7").disabled = true;
                 document.getElementById("b8").disabled = true;
+                
+                pl2.value ++;
+                
             } else if ((bb3 == "O") && (bb5 == "O")  && (bb7 == "O")){
                 alert("Player two('O')won");
                 document.getElementById("b1").disabled = true;
@@ -241,6 +286,9 @@
                 document.getElementById("b6").disabled = true;
                 document.getElementById("b8").disabled = true;
                 document.getElementById("b9").disabled = true;
+                
+                pl2.value ++;
+                
             }
         } 
 
