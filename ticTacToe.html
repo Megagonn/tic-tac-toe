@@ -21,7 +21,9 @@
     }
 </style>
 <body>
-    <audio src="media/mixkit-aggressive-beast-roar-13.wav"></audio>
+    <audio src="media/mixkit-aggressive-beast-roar-13.wav" autoplay></audio>
+    <audio src="media/mixkit-epic-orchestra-transition-2290 (1).wav" autoplay></audio>
+    <audio src="media/mixkit-mystwrious-bass-pulse-2298.wav" autoplay loop></audio>
     <div style="width: 70%; margin: 100px auto; display: flex;">
         <div style="width: 40%;">
             <fieldset>
@@ -102,6 +104,8 @@
     function disabledMe1() {
         document.getElementById("b1").disabled = true;
         document.getElementById("b1").style.backgroundColor = "red";
+        var audio = new Audio('a1.wav');
+        audio.play();
     }
     function disabledMe2() {
         document.getElementById("b2").disabled = true;
