@@ -8,6 +8,9 @@
 </head>
 
 <style>
+    body{
+        background-color: grey; color: gray;
+    }
     #main{
         width: 70%; margin: 100px auto; display: flex;
     }
@@ -17,7 +20,7 @@
         
     }
     #field fieldset{
-        background: linear-gradient(to bottom, greenyellow , green); border-radius: 10px;
+        background: linear-gradient(to bottom, goldenrod , gold); border-radius: 10px;
     }
     .inp{
         width: 80px;
@@ -51,7 +54,7 @@
         width: 40%; height: 40vh; margin: auto; border-radius: 10px; text-align: center;position: absolute; top: 40vh; left: 30%;
     }
     #display_box{
-        width: 50%;height: auto;background-color: hotpink; color: black;padding: 10px; margin: auto;border-radius: 10px; box-shadow: 0px 0px 500px 50px blue;
+        width: 50%;height: auto;background-color: gold; color: black;padding: 10px; margin: auto;border-radius: 10px; box-shadow: 0px 0px 500px 50px blue;
     }
     #tic_cont{
         width: 70%; padding: 5px; margin: 5px auto;
@@ -88,7 +91,7 @@
         <div id="button">
             <button onclick="start()" id="start" disabled >START</button>
         </div>
-        <div style="background-color: greenyellow; width: 60%; padding: 10px; border-radius: 10px;">
+        <div style="background-color: goldenrod; width: 60%; padding: 10px; border-radius: 10px;">
             <div style="display: flex;">
                 <input type="text" id="player1" readonly>
                 <div style="font-size: larger;">vs</div>
@@ -204,7 +207,7 @@
     }
     function disabledMe5() {
         document.getElementById("b5").disabled = true;
-        document.getElementById("b5").style.backgroundColor = "orange";
+        document.getElementById("b5").style.backgroundColor = "orangered";
         var audio = new Audio('a2.wav');
         audio.play();
     }
@@ -266,7 +269,7 @@
             // player 1
             if (((bb1 == "X") && (bb2 == "X")  && (bb3 == "X"))) {
                 // display_score unit
-                display_score.innerText = play.value + "WON";
+                display_score.innerText = play.value + " won";
 
                 // then, disable the rest
                 document.getElementById("b4").disabled = true;
@@ -286,7 +289,7 @@
 
             } else if (((bb4 == "X") && (bb5 == "X")  && (bb6 == "X"))) {
                 // display unit
-                display_score.innerText = play.value + "WON";
+                display_score.innerText = play.value + " won";
 
                 // then, disable the rest
                 document.getElementById("b1").disabled = true;
@@ -306,7 +309,7 @@
 
             } else if (((bb7 == "X") && (bb8 == "X")  && (bb9 == "X"))) {
                 // display unit
-                display_score.innerText = play.value + "WON";
+                display_score.innerText = play.value + " won";
 
                 // then, disable the rest
                 document.getElementById("b1").disabled = true;
@@ -326,7 +329,7 @@
                 
             } else if (((bb1 == "X") && (bb4 == "X")  && (bb7 == "X"))) {
                 // display unit
-                display_score.innerText = play.value + "WON";
+                display_score.innerText = play.value + " won";
 
                 // then, disable the rest
                 document.getElementById("b2").disabled = true;
@@ -346,7 +349,7 @@
                 
             } else if (((bb2 == "X") && (bb5 == "X")  && (bb8 == "X"))) {
                 // display unit
-                display_score.innerText = play.value + "WON";
+                display_score.innerText = play.value + " won";
 
                 // then, disable the rest
                 document.getElementById("b1").disabled = true;
@@ -366,7 +369,7 @@
                 
             } else if (((bb3 == "X") && (bb6 == "X")  && (bb9 == "X"))) {
                 // display unit
-                display_score.innerText = play.value + "WON";
+                display_score.innerText = play.value + " won";
 
                 // then, disable the rest
                 document.getElementById("b1").disabled = true;
@@ -386,7 +389,7 @@
                 
             } else if ((bb1 == "X") && (bb5 == "X")  && (bb9 == "X")){
                 // display unit
-                display_score.innerText = play.value + "WON";
+                display_score.innerText = play.value + " won";
 
                 // then, disable the rest
                 document.getElementById("b2").disabled = true;
@@ -406,7 +409,7 @@
                 
             } else if ((bb3 == "X") && (bb5 == "X")  && (bb7 == "X")){
                 // display unit
-                display_score.innerText = play.value + "WON";
+                display_score.innerText = play.value + " won";
 
                 // then, disable the rest
                 document.getElementById("b1").disabled = true;
@@ -431,7 +434,7 @@
             // player 2
             else if (((bb1 == "O") && (bb2 == "O")  && (bb3 == "O"))) {
                 // display unit
-                display_score.innerText = p2.value + " WON";
+                display_score.innerText = p2.value + "  won";
 
                 // then, disable the rest
                 document.getElementById("b4").disabled = true;
@@ -451,7 +454,7 @@
                 
             } else if (((bb4 == "O") && (bb5 == "O")  && (bb6 == "O"))) {
                 // display unit
-                display_score.innerText = p2.value + " WON";
+                display_score.innerText = p2.value + "  won";
 
                 // then, disable the rest
                 document.getElementById("b1").disabled = true;
@@ -471,7 +474,7 @@
                 
             } else if (((bb7 == "O") && (bb8 == "O")  && (bb9 == "O"))) {
                 // display unit
-                display_score.innerText = p2.value + " WON";
+                display_score.innerText = p2.value + "  won";
 
                 // then, disable the rest
                 document.getElementById("b1").disabled = true;
@@ -491,7 +494,7 @@
                 
             } else if (((bb1 == "O") && (bb4 == "O")  && (bb7 == "O"))) {
                 // display unit
-                display_score.innerText = p2.value + " WON";
+                display_score.innerText = p2.value + "  won";
 
                 // then, disable the rest
                 document.getElementById("b2").disabled = true;
@@ -511,7 +514,7 @@
                 
             } else if (((bb2 == "O") && (bb5 == "O")  && (bb8 == "O"))) {
                 // display unit
-                display_score.innerText = p2.value + " WON";
+                display_score.innerText = p2.value + "  won";
 
                 // then, disable the rest
                 document.getElementById("b1").disabled = true;
@@ -531,7 +534,7 @@
                 
             } else if (((bb3 == "O") && (bb6 == "O")  && (bb9 == "O"))) {
                 // display unit
-                display_score.innerText = p2.value + " WON";
+                display_score.innerText = p2.value + "  won";
 
                 // then, disable the rest
                 document.getElementById("b1").disabled = true;
@@ -551,7 +554,7 @@
                 
             } else if ((bb1 == "O") && (bb5 == "O")  && (bb9 == "O")){
                 // display unit
-                display_score.innerText = p2.value + " WON";
+                display_score.innerText = p2.value + "  won";
 
                 // then, disable the rest
                 document.getElementById("b2").disabled = true;
@@ -571,7 +574,7 @@
                 
             } else if ((bb3 == "O") && (bb5 == "O")  && (bb7 == "O")){
                 // display unit
-                display_score.innerText = p2.value + " WON";
+                display_score.innerText = p2.value + "  won";
 
                 // then, disable the rest
                 document.getElementById("b1").disabled = true;
